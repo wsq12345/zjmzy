@@ -3,6 +3,11 @@
     <div class="paten1"></div>
     <div class="paten2">
       <ul class="menu_list">
+        <li>
+          <a href="javascript:void(0)">
+            <img src="../assets/imgae/铭logo.gif">
+          </a>
+        </li>
         <li v-for="menu in menus" :key="menu.index">
           <a href="javascript:void(0)">
             {{ menu.name }}
@@ -48,11 +53,11 @@ export default {
 
 <style lang="scss" scoped>
 .paten1 {
-  background: rgba(48, 47, 47, 0.8);
+  background: rgb(68,68,68);
   height: 40px;
 }
 .paten2 {
-  background: rgb(48, 47, 47);
+  background: rgb(51, 51, 51);
   height: 40px;
   text-align: center;
   .menu_list,
@@ -65,7 +70,7 @@ export default {
     display: inline-block;
     li {
       float: left;
-      margin: 0 30px;
+      margin: 0 40px;
       a {
         height: 40px;
         font-size: 12px;
@@ -73,15 +78,22 @@ export default {
         color: white;
         text-decoration: none;
         text-align: center;
+        display: flex;
+        align-items:center;
+        justify-content:center;
         &:hover {
           color: red;
+        }
+        img {
+          width: 20px;
+          height: 20px;
         }
       }
     }
   }
 }
 .paten3 {
-  background: #ccc;
+  background: rgb(246, 246, 246);
   height: 100px;
   text-align: center;
   .menu_list,
@@ -92,6 +104,7 @@ export default {
   }
   .menu_list {
     display: inline-block;
+    overflow: hidden;
     li {
       float: left;
       display: flex;
@@ -100,11 +113,14 @@ export default {
       height: 100px;
       align-items:center;
       justify-content:center;
-      margin: 0 20px;
+      margin: 0 30px;
       img {
         width: 30px;
         height: 30px;
         margin: 0 auto;
+      }
+      span {
+        padding-top: 10px;
       }
     }
   }

@@ -1,12 +1,17 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
+    <header-guide></header-guide>
     <router-view/>
+    <footer-guide></footer-guide>
   </div>
 </template>
 
 <script>
+import HeaderGuide from '@/components/HeaderGuide'
+import FooterGuide from '@/components/FooterGuide'
 export default {
-  name: 'App'
+  name: 'App',
+  components: { HeaderGuide, FooterGuide }
 }
 </script>
 
@@ -20,5 +25,8 @@ export default {
 *{
   margin: 0;
   padding: 0;
+}
+[v-cloak]{
+  display: none;
 }
 </style>
