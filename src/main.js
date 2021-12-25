@@ -3,8 +3,19 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueLazyload from 'vue-lazyload'
+import 'babel-polyfill'
+
+Vue.use(VueLazyload)
 
 Vue.config.productionTip = false
+
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: '',
+  loading: '',
+  attempt: 1
+})
 
 /* eslint-disable no-new */
 new Vue({

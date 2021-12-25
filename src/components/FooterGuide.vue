@@ -39,9 +39,44 @@
             </li>
           </ul>
         </div>
+        <div class="tip">更多选购方式：前往<span>铭之远研磨阿里巴巴店铺</span>，或致电<span>18861211355</span>，<span>13776311077</span>，或<span>添加微信</span>咨询离你最近的销售点。</div>
+        <div class="home_info">
+          <span>Copyright © 2017 Mzyym Inc保留所有权利。</span>
+          <span>
+            <a href="javascript:void(0)">隐私政策</a>
+            <i>|</i>
+            <a href="javascript:void(0)">使用条款</a>
+            <i>|</i>
+            <a href="javascript:void(0)">销售政策</a>
+            <i>|</i>
+            <a href="javascript:void(0)">法律信息</a>
+            <i>|</i>
+            <a href="javascript:void(0)">网站地图</a>
+          </span>
+          <span class="china">
+            <span class="circle">中国</span>
+            中国
+          </span>
+        </div>
       </div>
     </div>
-    <div class="paten2"></div>
+    <div class="paten2">
+      <div class="wechat">
+        <i class="iconfont icon-wechat"></i>
+        <i class="iconfont icon-qq"></i>
+      </div>
+      <div class="contact">
+        <div>在线咨询，订单</div>
+        <div class="phone">Please Contact us</div>
+      </div>
+      <div class="wechat">
+        <i class="iconfont icon-telephone"></i>
+      </div>
+      <div class="contact">
+        <div>Phone number</div>
+        <div class="phone">18861211355   1377631077</div>
+      </div>
+    </div>
   </footer>
 </template>
 
@@ -122,7 +157,7 @@ export default {
         { id: 8, name: "联系我们" },
       ],
       menus6: [
-        { id: 1, name: "首页" },
+        { id: 1, name: "返回首页" },
       ],
     };
   },
@@ -131,12 +166,12 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  min-width: 1000px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   .paten1 {
     background: rgb(242, 242, 242);
-    height: 400px;
+    height: 500px;
     text-align: center;
     .content {
       display: inline-block;
@@ -144,6 +179,7 @@ export default {
       .logo {
         display: flex;
         align-content: center;
+        color: #555555;
         img {
           width: 16px;
           height: 16px;
@@ -155,6 +191,7 @@ export default {
       }
       .body {
         margin-top: 20px;
+        overflow: hidden;
         .menu_list,
         .menu_list li,
         .menu_list li a {
@@ -165,14 +202,19 @@ export default {
           float: left;
           margin-right: 80px;
           overflow: hidden;
+          &:last-child {
+            margin-right: 0;
+          }
           li {
             &:first-child {
               font-weight: 900;
+              color: #333333;
             }
             height: 10px;
             font-size: 10px;
             text-align: left;
             margin-bottom: 8px;
+            color: #474646;
             cursor: pointer;
             &:hover {
               color: red;
@@ -180,11 +222,76 @@ export default {
           }
         }
       }
+      .tip {
+        font-size: 14px;
+        text-align: left;
+        margin-top: 20px;
+        color: #888888;
+        span {
+          color: #1d7fce;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        padding-bottom: 5px;
+        border-bottom: 1px solid;
+      }
+      .home_info {
+        text-align: left;
+        padding: 5px;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        color: #888888;
+        a {
+          text-decoration: none;
+          color: #474646;
+          margin: 0 10px;
+        }
+        i {
+          font-size: 16px;
+        }
+        .china {
+          float: right;
+          .circle {
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            background: red;
+            color: yellow;
+            border-radius: 50%;
+          }
+        }
+      }
     }
   }
   .paten2 {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     background: rgb(68, 68, 68);
     height: 100px;
+    text-align: center;
+    .wechat {
+      &:nth-child(3) {
+        margin-left: 100px;
+        color: red;
+      }
+      height: 100px;
+      line-height: 100px;
+      display: inline-block;
+      i {
+        color: white;
+        font-size: 48px;
+      }
+    }
+    .contact {
+      display: inline-block;
+      color: white;
+      font-size: 20px;
+      text-align: left;
+      .phone {
+        font-size: 25px;
+      }
+    }
   }
 }
 </style>
