@@ -25,14 +25,18 @@
           <i class="iconfont icon-xiaoyuhao"></i>
         </div>
       </div>
+      <scroll></scroll>
+      <sale></sale>
     </div>
   </div>
 </template>
 
 <script>
 import Page1 from '@/components/Page1.vue'
+import Scroll from '@/components/Scroll.vue'
+import Sale from '@/components/Sale.vue'
 export default {
-  components: { Page1 },
+  components: { Page1, Scroll, Sale },
   name: 'Home',
   data() {
     return {
