@@ -27,6 +27,7 @@
       </div>
       <scroll></scroll>
       <sale></sale>
+      <service></service>
     </div>
   </div>
 </template>
@@ -35,8 +36,9 @@
 import Page1 from '@/components/Page1.vue'
 import Scroll from '@/components/Scroll.vue'
 import Sale from '@/components/Sale.vue'
+import Service from '@/components/Service.vue'
 export default {
-  components: { Page1, Scroll, Sale },
+  components: { Page1, Scroll, Sale, Service },
   name: 'Home',
   data() {
     return {
