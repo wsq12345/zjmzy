@@ -52,10 +52,10 @@ export default {
   }
   .link {
     margin: 20px 0 50px 0;
-    color: #0572ca;
     font-size: 20px;
     a {
       text-decoration: none;
+      color: #0572ca;
       &:nth-child(3) {
         margin-left: 50px;
       }

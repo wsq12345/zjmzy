@@ -29,6 +29,7 @@
       <sale></sale>
       <service></service>
       <introduce></introduce>
+      <article-content></article-content>
     </div>
   </div>
 </template>
@@ -39,8 +40,9 @@ import Scroll from '@/components/Scroll.vue'
 import Sale from '@/components/Sale.vue'
 import Service from '@/components/Service.vue'
 import Introduce from '@/components/Introduce.vue'
+import ArticleContent from '@/components/ArticleContent.vue'
 export default {
-  components: { Page1, Scroll, Sale, Service, Introduce},
+  components: { Page1, Scroll, Sale, Service, Introduce, ArticleContent},
   name: 'Home',
   data() {
     return {
