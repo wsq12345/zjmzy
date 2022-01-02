@@ -4,12 +4,12 @@
     <div class="paten2">
       <ul class="menu_list">
         <li>
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" @click="goTo('/home')">
             <img src="../assets/imgae/铭logo.gif">
           </a>
         </li>
         <li v-for="menu in menus" :key="menu.index">
-          <a href="javascript:void(0)">
+          <a href="javascript:void(0)" @click="goTo(menu.path)">
             {{ menu.name }}
           </a>
         </li>
@@ -32,11 +32,11 @@ export default {
   data() {
     return {
       menus: [
-        { id: 1, name: "Home 网站首页" },
-        { id: 2, name: "Product 产品中心" },
-        { id: 3, name: "Service 技术服务" },
-        { id: 4, name: "Cases 样品展示" },
-        { id: 5, name: "About us 关于我们" },
+        { id: 1, name: "Home 网站首页", path: 'home' },
+        { id: 2, name: "Product 产品中心", path: 'product' },
+        { id: 3, name: "Service 技术服务", path: 'service' },
+        { id: 4, name: "Cases 样品展示", path: 'cases' },
+        { id: 5, name: "About us 关于我们", path: 'about' },
       ],
       mach: [
         {
@@ -72,6 +72,11 @@ export default {
       ],
     };
   },
+  methods: {
+    goTo(path) {
+      this.$router.replace(path)
+    }
+  }
 };
 </script>
 
