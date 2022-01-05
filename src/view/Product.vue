@@ -4,7 +4,7 @@
       <div class="product">
         <div class="left">
           <div class="header">宝桢研磨产品类别</div>
-          <ul><li v-for="item in types" :key="item.index"><a href="javascript:void(0)">{{ item.name }}</a></li></ul>
+          <ul><li v-for="item in types" :key="item.index"><a href="javascript:void(0)" @click="change(item)">{{ item.name }}</a></li></ul>
           <div class="header">联系我们</div>
           <div class="contact">
             <img v-lazy="picSrc">
@@ -32,7 +32,11 @@
         <div class="right">
           <div class="header">
             <span>产品展示</span>
-            <span class="path">您当前的位置是：网站首页&gt;&gt;流动式光饰机系列</span>
+            <span class="path">您当前的位置是：网站首页&gt;&gt;{{ type }}</span>
+          </div>
+          <div class="img" v-for="item in imgages" :key="item.index">
+            <img v-lazy="item.src">
+            <span>{{ item.name }}</span>
           </div>
         </div>
       </div>
@@ -64,7 +68,20 @@ export default {
         { id:13, name: '研磨剂抛光剂系列' },
         { id:14, name: '多功能拖拽研磨抛光机' }
       ],
-      picSrc: require('@/assets/imgae/ban3.jpg')
+      picSrc: require('@/assets/imgae/ban3.jpg'),
+      type: '流动式光饰机系列',
+      imgages: [
+        { id:1, name: '半自动涡流式光饰机', src: require('@/assets/imgae/23.jpg')},
+        { id:2, name: '半自动涡流式光饰机', src: require('@/assets/imgae/56.jpg')},
+        { id:3, name: '流动式光饰机', src: require('@/assets/imgae/2345.jpg')},
+        { id:4, name: '流动式光饰机', src: require('@/assets/imgae/67.jpg')},
+        { id:5, name: '全自动涡流式光饰机', src: require('@/assets/imgae/868.jpg')}
+      ]
+    }
+  },
+  methods: {
+    change(item) {
+      this.type = item.name;
     }
   }
 }
@@ -142,7 +159,7 @@ export default {
       .right {
         float: left;
         border: 1px solid #ccc;
-        height: 500px;
+        padding-bottom: 50px;
         width: 750px;
         margin-left: 10px;
         .header {
@@ -150,6 +167,7 @@ export default {
           background-image: linear-gradient( #ffffff, #e9e9e9);
           height: 35px;
           line-height: 35px;
+          overflow: hidden;
           span {
             font-size: 14px;
             &:first-child {
@@ -161,6 +179,19 @@ export default {
           .path {
             float: right;
             margin-right: 10px;
+          }
+        }
+        .img {
+          width: 233px;
+          height: auto;
+          float: left;
+          margin-left: 10px;
+          margin-top: 10px;
+          img {
+            width: 100%;
+            height: 180px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
           }
         }
       }
