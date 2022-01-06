@@ -7,7 +7,7 @@
       <div class="small" v-html="content.article4"></div>
       <div class="small" v-html="content.article5"></div>
       <div class="link">
-        <a href="javascript:void(0)">进一步了解</a>
+        <a href="javascript:void(0)">{{ content.link || '进一步了解' }}</a>
         <i class="iconfont icon-xiaoyuhao"></i>
         <a href="javascript:void(0)">选购</a>
         <i class="iconfont icon-xiaoyuhao"></i>
