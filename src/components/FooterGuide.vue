@@ -10,32 +10,44 @@
         <div class="body">
           <ul class="menu_list">
             <li v-for="menu in menus1" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
           <ul class="menu_list">
             <li v-for="menu in menus2" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
           <ul class="menu_list">
             <li v-for="menu in menus3" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
           <ul class="menu_list">
             <li v-for="menu in menus4" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
           <ul class="menu_list">
             <li v-for="menu in menus5" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
           <ul class="menu_list">
             <li v-for="menu in menus6" :key="menu.index">
+              <a href="javascript:void(0)" @click="goTo(menu.path)">
                 {{ menu.name }}
+              </a>
             </li>
           </ul>
         </div>
@@ -157,10 +169,16 @@ export default {
         { id: 8, name: "联系我们" },
       ],
       menus6: [
-        { id: 1, name: "返回首页" },
+        { id: 1, name: "返回首页", path: '/home' },
       ],
     };
   },
+  methods: {
+    goTo(path) {
+      if (path)
+        this.$router.replace(path);
+    }
+  }
 };
 </script>
 
@@ -214,10 +232,12 @@ export default {
             font-size: 10px;
             text-align: left;
             margin-bottom: 8px;
-            color: #474646;
-            cursor: pointer;
-            &:hover {
-              color: red;
+            a {
+              text-decoration: none;
+              color: #474646;
+              &:hover {
+                color: red;
+              }
             }
           }
         }
